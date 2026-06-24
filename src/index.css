@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", serif;
+  --font-mono: "Space Mono", monospace;
+
+  --color-primary: #1a1a1a;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #faf9f6;
+  --color-on-primary-container: #1a1a1a;
+  --color-primary-fixed: rgba(212, 163, 115, 0.15);
+  --color-primary-fixed-dim: #d4a373;
+  --color-on-primary-fixed: #1a1a1a;
+  --color-on-primary-fixed-variant: #d4a373;
+
+  --color-secondary: #d4a373;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #fcf8f2;
+  --color-on-secondary-container: #1a1a1a;
+  --color-secondary-fixed: #fcf8f2;
+  --color-secondary-fixed-dim: #d4a373;
+  --color-on-secondary-fixed: #1a1a1a;
+  --color-on-secondary-fixed-variant: #d4a373;
+
+  --color-tertiary: #1a1a1a;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #faf9f6;
+  --color-on-tertiary-container: #1a1a1a;
+  --color-tertiary-fixed: #faf9f6;
+  --color-tertiary-fixed-dim: #1a1a1a;
+  --color-on-tertiary-fixed: #1a1a1a;
+  --color-on-tertiary-fixed-variant: #1a1a1a;
+
+  --color-error: #ff4d4d;
+  --color-on-error: #ffffff;
+  --color-error-container: #fff1f1;
+  --color-on-error-container: #ff4d4d;
+
+  --color-background: #fdfdfc;
+  --color-on-background: #1a1a1a;
+  --color-surface: #ffffff;
+  --color-on-surface: #1a1a1a;
+  --color-on-surface-variant: rgba(26, 26, 26, 0.6);
+
+  --color-surface-dim: #f5f4f0;
+  --color-surface-bright: #fdfdfc;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #faf9f6;
+  --color-surface-container: #f5f4f0;
+  --color-surface-container-high: #ebeae4;
+  --color-surface-container-highest: #e0ded6;
+  --color-inverse-surface: #1a1a1a;
+  --color-inverse-on-surface: #fdfdfc;
+  --color-outline: rgba(26, 26, 26, 0.08);
+  --color-outline-variant: rgba(26, 26, 26, 0.15);
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-background);
+  color: var(--color-on-background);
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Custom styling to match mockup borders */
+.editorial-border {
+  border: 1px solid rgba(26, 26, 26, 0.08);
+}
+
+.editorial-card {
+  background: white;
+  border: 1px solid rgba(26, 26, 26, 0.08);
+  transition: all 0.2s ease-in-out;
+}
+
+.editorial-card:hover {
+  border-color: #1a1a1a;
+}
+
+/* Dark Theme Overrides and Class Mappings */
+.dark {
+  --color-white: #171715;
+  --color-background: #10100f;
+  --color-on-background: #e2e1da;
+  --color-surface: #171715;
+  --color-on-surface: #e2e1da;
+  --color-on-surface-variant: rgba(226, 225, 218, 0.6);
+
+  --color-primary: #e2e1da;
+  --color-on-primary: #10100f;
+  --color-primary-container: #1e1e1b;
+  --color-on-primary-container: #e2e1da;
+  --color-primary-fixed: rgba(212, 163, 115, 0.25);
+  --color-primary-fixed-dim: #d4a373;
+  --color-on-primary-fixed: #e2e1da;
+  --color-on-primary-fixed-variant: #d4a373;
+
+  --color-secondary: #d4a373;
+  --color-on-secondary: #10100f;
+  --color-secondary-container: #26211c;
+  --color-on-secondary-container: #e2e1da;
+  --color-secondary-fixed: #26211c;
+  --color-secondary-fixed-dim: #d4a373;
+  --color-on-secondary-fixed: #e2e1da;
+  --color-on-secondary-fixed-variant: #d4a373;
+
+  --color-tertiary: #e2e1da;
+  --color-on-tertiary: #10100f;
+  --color-tertiary-container: #1e1e1b;
+  --color-on-tertiary-container: #e2e1da;
+  --color-tertiary-fixed: #1e1e1b;
+  --color-tertiary-fixed-dim: #e2e1da;
+  --color-on-tertiary-fixed: #e2e1da;
+  --color-on-tertiary-fixed-variant: #e2e1da;
+
+  --color-error: #ff5e5e;
+  --color-on-error: #10100f;
+  --color-error-container: #2e1616;
+  --color-on-error-container: #ff5e5e;
+
+  --color-surface-dim: #1e1e1b;
+  --color-surface-bright: #2b2b27;
+  --color-surface-container-lowest: #0d0d0c;
+  --color-surface-container-low: #171715;
+  --color-surface-container: #1e1e1b;
+  --color-surface-container-high: #2b2b27;
+  --color-surface-container-highest: #3c3c37;
+  --color-inverse-surface: #e2e1da;
+  --color-inverse-on-surface: #10100f;
+  --color-outline: rgba(226, 225, 218, 0.12);
+  --color-outline-variant: rgba(226, 225, 218, 0.22);
+}
+
+.dark body {
+  background-color: var(--color-background);
+  color: var(--color-on-background);
+}
+
+.dark .editorial-border {
+  border: 1px solid var(--color-outline);
+}
+
+.dark .editorial-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-outline);
+}
+
+.dark .editorial-card:hover {
+  border-color: var(--color-primary);
+}
+
+/* Force static bright background classes into dynamic variables in dark mode */
+.dark .bg-white {
+  background-color: var(--color-surface) !important;
+}
+
+.dark .bg-\[\#fcf8f2\] {
+  background-color: var(--color-secondary-container) !important;
+}
+
+.dark .bg-\[\#fcf8f2\]\/60 {
+  background-color: rgba(38, 33, 28, 0.6) !important;
+}
+
+.dark .bg-\[\#fcf8f2\]\/30 {
+  background-color: rgba(38, 33, 28, 0.3) !important;
+}
+
+.dark .bg-\[\#fcf8f2\]\/35 {
+  background-color: rgba(38, 33, 28, 0.35) !important;
+}
+
+.dark .bg-\[\#fdfcfb\] {
+  background-color: var(--color-surface-dim) !important;
+}
+
+.dark .bg-\[\#fafafa\] {
+  background-color: var(--color-surface-dim) !important;
+}
+
+.dark .bg-\[\#f8f9ff\] {
+  background-color: var(--color-background) !important;
+}
+
+.dark .bg-\[\#fff1f1\] {
+  background-color: var(--color-error-container) !important;
+}
+
+.dark .bg-slate-50 {
+  background-color: var(--color-surface-dim) !important;
+}
+
+.dark .hover\:bg-slate-50:hover {
+  background-color: var(--color-surface-container) !important;
+}
+
+.dark .bg-slate-900\/40 {
+  background-color: rgba(0, 0, 0, 0.65) !important;
+}
+
+.dark .border-outline {
+  border-color: var(--color-outline) !important;
+}
+
+.dark .border-outline\/15 {
+  border-color: rgba(226, 225, 218, 0.15) !important;
+}
+
+.dark .border-outline\/30 {
+  border-color: rgba(226, 225, 218, 0.3) !important;
+}
+
+.dark input, .dark textarea, .dark select {
+  background-color: var(--color-background) !important;
+  color: var(--color-on-background) !important;
+  border-color: var(--color-outline) !important;
+}
+
+.dark input::placeholder, .dark textarea::placeholder {
+  color: rgba(226, 225, 218, 0.4) !important;
+}
+
+

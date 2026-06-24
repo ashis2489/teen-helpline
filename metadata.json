@@ -1,0 +1,6 @@
+{
+  "name": "Teens Helpline",
+  "description": "An empathetic, safe, and playful peer-to-peer mental health, career guidance, and counseling platform for teenagers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
